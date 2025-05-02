@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+:root{
+--White: hsl(0, 0%, 100%);
+--Stone100: hsl(30, 54%, 90%);
+--Stone150: hsl(30, 18%, 87%);
+--Stone600: hsl(30, 10%, 34%);
+--Stone900: hsl(24, 5%, 18%);
+--Brown800: hsl(14, 45%, 36%);
+--Rose800: hsl(332, 51%, 32%);
+--Rose50: hsl(330, 100%, 98%);
+--outfit: 'Outfit', sans-serif;
+--young: "Young Serif", serif;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--Stone100);
+  min-height: 100vh;
+}
+
+.container{
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--White);
+  margin: 5rem auto;
+  padding: 1.5rem;
+  border-radius: 20px;
+  color: var(--Stone600);
+  font-family: var(--outfit);
+}
+
+
+.container h1{
+  font-family: var(--young);
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 1rem 0;
+  color: var(--Stone900);
+}
+.recipe h2{
+  font-family: var(--young);
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 1rem 0;
+  color: var(--Brown800);
+}
+
+.preparation{
+  background: var(--Rose50);
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem 0;
+}
+.preparation h2{
+  font-family: var(--outfit);
+  font-weight: 600;
+  margin: 1rem 0;
+  color: var(--Rose800);
+}
+.preparation ul{
+  box-sizing: content-box;
+  padding-left: 1rem;
+  margin: 1rem;
+}
+.preparation ul li{
+  margin: 1rem 0;
+}
+.preparation li::marker{
+  color: var(--Rose800);
+}
+.preparation span{
+  font-weight: 600;
+}
+
+.ingredients{
+  padding: 1rem;
+  margin: 1rem 0;
+  border-bottom: 1px solid var(--Stone150);
+}
+.ingredients ul{
+  box-sizing: content-box;
+  margin: 1rem;
+}
+.ingredients ul li,.instructions, .instructions p{
+  margin: 1rem 0;
+}
+.ingredients li::marker{
+  color: var(--Brown800);
+}
+.instructions{
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem 0;
+  border-bottom: 1px solid var(--Stone150);
+}
+.instructions ol{
+  box-sizing: content-box;
+  margin: 1rem;
+}
+.instructions ol li{
+  margin: 1rem 0;
+}
+.instructions li::marker{
+  color: var(--Brown800);
+}
+.instructions span{
+  font-weight: 600;
+}
+
+.nutrition{
+  padding: 1rem;
+  margin: 1rem 0;
+}
+.nutrition table{
+  margin: 1rem 0;
+  width: 100%;
+}
+.nutrition table tr td{
+  padding: 1rem;
+  border-bottom: 1px solid var(--Stone150);
+}
+.nutrition table tr td.no-border{
+  border-bottom: none;
+}
+.nutrition table tr td:nth-child(2){
+  text-align: left;
+  color: var(--Brown800);
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .container{
+    width: 100%;
+    border-radius: 0;
+    padding: 0;
+    margin:0;
+  }
+  .container h1, .container p,.ingredients, .preparation, .nutrition, .instructions{
+    padding: 1rem;
+    margin: 1rem;
+  }
+}
